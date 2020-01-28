@@ -36,9 +36,13 @@ enum macro_keycodes {
 #define KC_A_DEL ALT_T(KC_DEL) // alt
 
 
+#define LAL_NCV  LALT_T(KC_LANG2)
+#define RAL_CNV  RALT_T(KC_LANG1)
+#define LGU_DEL  LGUI_T(KC_DEL)
+#define RGU_ENT  RGUI_T(KC_ENT)
+
 #define RSF_SCL  RSFT_T(KC_SCLN)
 #define RCT_ESC  RCTL_T(KC_ESC)
-#define RAL_ENT  RALT_T(KC_ENT)
 
 #define RSE_SPC  LT(_RAISE,  KC_SPC)
 #define LOW_F    LT(_LOWER,  KC_F)
@@ -69,9 +73,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+---------+--------+---------+--------|   |--------+---------+--------+---------+--------+--------|
      KC_LCTL, KC_A   , KC_S    , KC_D   , LOW_F   , KC_G   ,     KC_H   , KC_J    , KC_K   , KC_L    , RSF_SCL, KC_QUOT,
   //|--------+--------+---------+--------+---------+--------|   |--------+---------+--------+---------+--------+--------|
-     KC_LSFT, KC_Z   , KC_X    , KC_C   , ADJ_V   , KC_B  ,     LOW_N  , KC_M    , KC_COMM, KC_DOT  , KC_SLSH, KC_RSFT,
+     KC_LSFT, KC_Z   , KC_X    , KC_C   , ADJ_V   , KC_B   ,     LOW_N  , KC_M    , KC_COMM, KC_DOT  , KC_SLSH, KC_RSFT,
   //`--------+--------+---------+--------+---------+--------/   \--------+---------+--------+---------+--------+--------'
-                       KC_A_DEL, KC_G_EN, RSE_SPC , KC_BTN1,     ADJ_BS , RCT_ESC , KC_G_JA, RAL_ENT
+                       LAL_NCV , LGU_DEL, RSE_SPC , KC_BTN1,     ADJ_BS , RCT_ESC , RGU_ENT, RAL_CNV
   //                 `----------+--------+---------+--------'   `--------+---------+--------+---------'
   ),
 
