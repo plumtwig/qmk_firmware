@@ -5,9 +5,11 @@
 #define RAL_CNV  RALT_T(KC_LANG1)
 #define LGU_NCV  LGUI_T(KC_LANG2)
 #define RGU_ENT  RGUI_T(KC_ENT)
+#define RGU_IN8  RGUI_T(KC_INT8)
 
 #define RSF_SCL  RSFT_T(KC_SCLN)
 #define RCT_ESC  RCTL_T(KC_ESC)
+#define RCT_IN7  RCTL_T(KC_INT7)
 
 #define LT1_SPC  LT(1, KC_SPC)
 #define LT2_F    LT(2, KC_F)
@@ -29,7 +31,9 @@
 #define SFT_8    LSFT(KC_8)
 #define SFT_9    LSFT(KC_9)
 #define SFT_0    LSFT(KC_0)
+#define SFT_LBR  LSFT(KC_LBRC)
 
+#define OSM_LSF  OSM(MOD_LSFT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -37,16 +41,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KEYMAP(
     KC_TAB,           KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_BSPC,
     KC_LCTL,          KC_A,    KC_S,    KC_D,    LT2_F,   KC_G,         KC_H,    KC_J,    KC_K,    KC_L,    RSF_SCL, LT3_QOT, KC_ENT,
-    KC_LSFT, KC_BSLS, KC_Z,    KC_X,    KC_C,    LT3_V,   KC_B,         LT2_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,
-    KC_BTN1, KC_TRNS, KC_LALT,          LGU_NCV, LT1_SPC,               RCT_ESC, RGU_ENT, RAL_CNV, KC_TRNS, KC_TRNS,          KC_TRNS
+    KC_LSFT, OSM_LSF, KC_Z,    KC_X,    KC_C,    LT3_V,   KC_B,         LT2_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,
+    KC_BTN1, KC_BTN2, KC_LALT,          LGU_NCV, LT1_SPC,               RCT_ESC, RGU_ENT, RAL_CNV, KC_TRNS, KC_TRNS,          MU_TOG
   ),
 
   // Layer 1, Space-modifiers: Arrows and so on.
 	KEYMAP(
-    KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_BTN2, KC_INT1, KC_MINS, KC_EQL,  KC_INT3, SFT_2,   KC_TRNS,
+    RESET,            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_BTN2, KC_INT1, KC_MINS, KC_EQL,  KC_INT3, SFT_LBR, KC_TRNS,
     KC_TRNS,          KC_TRNS, KC_TRNS, KC_PGUP, KC_PGDN, G_F17,        KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,  SFT_7,   KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, G_F18,   G_F19,        KC_BSPC, KC_DEL,  KC_RBRC, KC_BSLS, KC_HOME,          KC_END,
-    KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          RESET
+    KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,               RCT_IN7, RGU_IN8, KC_TRNS, KC_TRNS, KC_TRNS,          MU_MOD
   ),
 
   // Layer 2, F,N-modifiers: Numerics and symbols.
@@ -60,9 +64,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Layer 3, V,:-modifiers: Functions and mouse keys.
 	KEYMAP(
     KC_F1,            KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,        KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_TRNS,
-    KC_TRNS,          KC_MRWD, KC_MPLY, KC_MFFD, KC_VOLD, KC_VOLU,      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_TRNS,          KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,               KC_WH_D, KC_WH_U, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS
+    KC_MPLY,          KC_MRWD, KC_MFFD, KC_MUTE, KC_VOLD, KC_VOLU,      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_BTN3, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_F20,  KC_F21,  KC_F22,  KC_F23,  KC_F24,       KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_TRNS,          KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS,          KC_BTN2, KC_BTN1,               KC_WH_D, KC_WH_U, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS
   ),
 
   // Layer 4, No plan.
