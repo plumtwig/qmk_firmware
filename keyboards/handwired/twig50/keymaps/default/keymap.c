@@ -17,6 +17,7 @@
 #define LT3_BS   LT(3, KC_BSPC)
 #define LT3_V    LT(3, KC_V)
 #define LT3_QOT  LT(3, KC_QUOT)
+#define TG4      TG(4)
 #define G_F17    LGUI(KC_F17)
 #define G_F18    LGUI(KC_F18)
 #define G_F19    LGUI(KC_F19)
@@ -41,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KEYMAP(
     KC_TAB,           KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_BSPC,
     KC_LCTL,          KC_A,    KC_S,    KC_D,    LT2_F,   KC_G,         KC_H,    KC_J,    KC_K,    KC_L,    RSF_SCL, LT3_QOT, KC_ENT,
-    KC_LSFT, OSM_LSF, KC_Z,    KC_X,    KC_C,    LT3_V,   KC_B,         LT2_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,
+    KC_LSFT, TG4,     KC_Z,    KC_X,    KC_C,    LT3_V,   KC_B,         LT2_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,
     KC_BTN1, KC_BTN2, KC_LALT,          LGU_NCV, LT1_SPC,               RCT_ESC, RGU_ENT, RAL_CNV, KC_TRNS, KC_TRNS,          MU_TOG
   ),
 
@@ -69,12 +70,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_TRNS,          KC_BTN2, KC_BTN1,               KC_WH_D, KC_WH_U, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS
   ),
 
-  // Layer 4, No plan.
+  // Layer 4, Toggles: One handed mode.
 	KEYMAP(
-    KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS
+    KC_TRNS,          KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS,          KC_LEFT, KC_DOWN, KC_RGHT, KC_LSFT, KC_TRNS,      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_RSFT, KC_TRNS, KC_TRNS,
+    KC_TRNS, TG4,     KC_TRNS, KC_TRNS, KC_PGUP, KC_PGDN, KC_TRNS,      KC_PGDN, KC_PGUP, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_LALT,          KC_LGUI, KC_LCTL,               KC_RCTL, KC_RGUI, KC_RALT, KC_TRNS, KC_TRNS,          KC_TRNS
   )
 };
 
