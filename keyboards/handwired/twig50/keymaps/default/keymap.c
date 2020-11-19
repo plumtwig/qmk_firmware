@@ -49,16 +49,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Layer 1, Space-modifiers: Arrows and so on.
 	KEYMAP(
     RESET,            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_BTN2, KC_INT1, KC_MINS, KC_EQL,  KC_INT3, SFT_LBR, KC_TRNS,
-    KC_TRNS,          KC_TRNS, KC_TRNS, KC_PGUP, KC_PGDN, G_F17,        KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,  SFT_7,   KC_TRNS,
+    KC_TRNS,          KC_TRNS, KC_TRNS, KC_PGUP, KC_PGDN, G_F17,        KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,  SFT_7,   SFT_2,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, G_F18,   G_F19,        KC_BSPC, KC_DEL,  KC_RBRC, KC_BSLS, KC_HOME,          KC_END,
     KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,               RCT_IN7, RGU_IN8, KC_TRNS, KC_TRNS, KC_TRNS,          MU_MOD
   ),
 
   // Layer 2, F,N-modifiers: Numerics and symbols.
 	KEYMAP(
-    KC_TRNS,          SFT_1,   SFT_2,   SFT_3,   SFT_4,   SFT_5,        SFT_6,   SFT_7,   SFT_8,   SFT_9,   KC_ENT , SFT_1,   KC_TRNS,
-    KC_0,             KC_1,    KC_2,    KC_3,    KC_4,    KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    SFT_2,   KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_6,    KC_7,    KC_8,    KC_8,    KC_9,         KC_BSPC, KC_MINS, SFT_4,   SFT_5,   KC_TRNS,          KC_TRNS,
+    KC_TRNS,          SFT_1,   SFT_2,   SFT_3,   SFT_4,   SFT_5,        SFT_6,   SFT_7,   SFT_8,   SFT_9,   KC_COMM, KC_DOT,  KC_QUOT,
+    KC_TRNS,          KC_1,    KC_2,    KC_3,    KC_4,    KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    SFT_1,   SFT_2,
+    KC_TRNS, KC_TRNS, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,         KC_BSPC, KC_MINS, SFT_4,   SFT_5,   KC_TRNS,          KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_4,                  KC_5,    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS
   ),
 
