@@ -27,25 +27,32 @@ enum custom_keycodes {
   QMKURL
 };
 
+#define CMD_W    LGUI(KC_W)
+#define CMD_Q    LGUI(KC_Q)
+#define MT_LG_L  LGUI_T(KC_LEFT)
+#define MT_LS_U  LSFT_T(KC_UP)
+#define MT_RA_D  RALT_T(KC_DOWN)
+#define MT_RG_R  RGUI_T(KC_RGHT)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_BASE] = LAYOUT_ortho_4x4(
-    KC_HOME,  KC_PGUP,  KC_PGDN,  KC_END , \
-    KC_LEFT,  KC_UP,    KC_DOWN,  KC_RGHT, \
-    MO(_FN2), KC_VOLU,  KC_MPLY,  KC_MPRV, \
-    MO(_FN1), KC_VOLD,  KC_MUTE,  KC_MNXT  \
+    KC_LSFT,  KC_LGUI,  KC_LCTL,  KC_TAB,  \
+    MO(_FN1), MO(_FN2), KC_VOLD,  KC_VOLU, \
+    MT_LG_L,  MT_LS_U,  MT_RA_D,  MT_RG_R, \
+    CMD_W,    CMD_Q,    KC_RCTL,  KC_BTN1  \
   ),
   [_FN1] = LAYOUT_ortho_4x4(
-    KC_ESC,   KC_P7,    KC_P8,    KC_P9,   \
-    KC_TAB,   KC_P4,    KC_P5,    KC_P6,   \
-    KC_ENT,   KC_P1,    KC_P2,    KC_P3,   \
-    _______,  KC_P0,    KC_P0,    KC_DOT   \
+    RESET,    _______,  _______,  _______, \
+    _______,  _______,  _______,  _______, \
+    _______,  _______,  _______,  _______, \
+    _______,  _______,  KC_ENT,   KC_SPC   \
   ),
   [_FN2] = LAYOUT_ortho_4x4(
-    RGB_TOG,  RGB_HUI,  RGB_SAI,  RGB_VAI, \
-    RGB_MOD,  RGB_HUD,  RGB_SAD,  RGB_VAD, \
-    _______,  _______,  _______,  RESET,   \
-    BL_STEP,  _______,  QMKBEST,  QMKURL   \
+    _______,  _______,  _______,  _______, \
+    _______,  _______,  _______,  _______, \
+    _______,  _______,  _______,  _______, \
+    _______,  _______,  _______,  _______  \
   )
 
 };
